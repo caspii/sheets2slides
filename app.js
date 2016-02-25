@@ -5,13 +5,13 @@ $(function() {
 
 
 
+
   $.ajax({
        url: ajaxURL,
        success: function(data_csv) {
          stories = $.csv.toArrays(data_csv);
          //console.log(a)
          for (i = 1; i < stories.length; i++) {
-           console.log(stories[i])
            createSlide(stories[i])
          }
 

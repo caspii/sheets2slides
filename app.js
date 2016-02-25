@@ -1,11 +1,8 @@
 $(function() {
   console.log( 'ready!' );
   window.markdown_string = ("class: center, middle\n\n # My User Stories\n\n---\n") // Global Variable
-  ajaxURL = "/user_stories.csv"
-
 
   var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1HZsaJEXOp0dUEeVp9CdUmHlv16QYmqP_jq7wCVxLgh4/pubhtml?gid=0&single=true';
-
 
   Tabletop.init( { key: public_spreadsheet_url,
                        callback:  processData,
@@ -27,7 +24,6 @@ $(function() {
     }
 
 });
-
 
 function createSlide(story_obj){
   window.markdown_string += "## ID: " + story_obj['ID'] + " // PRIO: " + story_obj['Priority'] + " <hr>\n"

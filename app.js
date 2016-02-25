@@ -4,6 +4,7 @@ $(function() {
   ajaxURL = "/user_stories.csv"
 
 
+
   $.ajax({
        url: ajaxURL,
        success: function(data_csv) {
@@ -32,9 +33,9 @@ $(function() {
 
 
 function createSlide(story_array){
-  window.markdown_string += "# " + story_array[0] + "\n"
-  window.markdown_string += "## Importance: " + story_array[2] + "\n "
-  window.markdown_string += "As a " + story_array[3] + ", I want to "
-  window.markdown_string += story_array[4] + " so that " + story_array[5] + "\n"
+  window.markdown_string += "## ID: " + story_array[0] + " // PRIO: " + story_array[1] + " <hr>\n"
+  window.markdown_string += "# As a " + story_array[2] + ", I want to "
+  window.markdown_string += story_array[3] + " so that " + story_array[4] + "\n"
+  window.markdown_string += story_array[5] + "\n"
   window.markdown_string += '---\n'
 }

@@ -14,7 +14,7 @@ $(function() {
 
 
 function createSlide(story_obj){
-  window.markdown_string += "## ID: " + story_obj['ID'] + " // PRIO: " + story_obj['Priority'] + " <hr>\n"
+  window.markdown_string += "### ID: " + story_obj['ID'] + "\n # PRIO: " + story_obj['Priority'] + " <hr>\n"
   window.markdown_string += "# As a " + story_obj['As a'] + ", I want to "
   window.markdown_string += story_obj['I want to'] + " so that " + story_obj['so that'] + "\n"
   window.markdown_string += story_obj['Notes'] + "\n"
@@ -22,7 +22,7 @@ function createSlide(story_obj){
 }
 
 function processData(stories, tabletop) {
-  for (i = 1; i < stories.length; i++) {
+  for (i = 0; i < stories.length; i++) {
     createSlide(stories[i])
   }
 
